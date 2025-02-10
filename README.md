@@ -120,5 +120,4 @@ A continuación, se presenta un **diagrama de flujo** que ilustra cómo ReuniChe
 
 Este esquema ofrece una **visión global** del proyecto, mostrando el recorrido de la información desde la generación de preguntas hasta la decisión final sobre la reunión o la emisión de un informe de conclusiones.
 
-```markdown
 ![Flujo de ReuniCheck con Base de Datos y Usuarios](img/flujo.png)
