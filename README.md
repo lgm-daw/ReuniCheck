@@ -109,4 +109,16 @@ Este ciclo permite a las empresas y equipos reducir reuniones innecesarias, mant
 - Servicios de mensajería o correo para notificaciones: SendGrid, SMTP, etc.  
 - Opcional: Integración con APIs de calendario (Google Calendar, Outlook, etc.) para programar reuniones de forma automática.
 
+## Flujo General de ReuniCheck
 
+A continuación, se presenta un **diagrama de flujo** que ilustra cómo ReuniCheck interactúa con los distintos actores (Organizador y Participantes), la Base de Datos y el propio sistema en cada etapa:
+
+1. **El Organizador** inicia el proceso definiendo el tema principal y ajustando preguntas.
+2. **Los Participantes** reciben y responden dichas preguntas.
+3. **ReuniCheck** reúne la información, la analiza y determina si realmente se necesita una reunión.
+4. **La base de datos** centraliza todo (temas, preguntas y respuestas) para su posterior consulta y análisis.
+
+Este esquema ofrece una **visión global** del proyecto, mostrando el recorrido de la información desde la generación de preguntas hasta la decisión final sobre la reunión o la emisión de un informe de conclusiones.
+
+```markdown
+![Flujo de ReuniCheck con Base de Datos y Usuarios](img/flujo.png)
