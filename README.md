@@ -121,3 +121,63 @@ A continuación, se presenta un **diagrama de flujo** que ilustra cómo ReuniChe
 Este esquema ofrece una **visión global** del proyecto, mostrando el recorrido de la información desde la generación de preguntas hasta la decisión final sobre la reunión o la emisión de un informe de conclusiones.
 
 ![Flujo de ReuniCheck con Base de Datos y Usuarios](img/flujo.png)
+
+```markdown
+# Explicación paso a paso del diagrama
+
+Este diagrama representa cómo **ReuniCheck** (el sistema) coordina las interacciones entre el **Organizador**, los **Participantes** y la **Base de Datos** para decidir si es necesaria una reunión o se pueden extraer conclusiones sin convocarla.
+
+1. **Ingreso del tema principal**  
+   - El _Organizador_ inicia el proceso indicando el tema que motiva la posible reunión (por ejemplo: "Revisión de hitos del proyecto X").  
+   - Esto se guarda en la Base de Datos para referencia posterior.
+
+2. **Generación de preguntas (IA/Reglas)**  
+   - El **Sistema ReuniCheck** genera automáticamente un conjunto de preguntas relevantes (usando inteligencia artificial o reglas predefinidas).  
+   - Se muestran al Organizador para que las revise o ajuste según sus necesidades.
+
+3. **Ajuste y definición de participantes**  
+   - El _Organizador_ puede editar, añadir o quitar preguntas según la realidad de su equipo.  
+   - También asigna quién debe responder a cada pregunta (por ejemplo, solo el líder técnico o todo el departamento).
+
+4. **Solicitud de envío de cuestionario**  
+   - Una vez definidas las preguntas y participantes, el Organizador solicita al sistema que envíe los cuestionarios.  
+   - El **Sistema ReuniCheck** almacena todos esos ajustes (preguntas y participantes) en la Base de Datos.
+
+5. **Envío de cuestionario a Participantes**  
+   - El **Sistema ReuniCheck** envía las preguntas a los destinatarios indicados, ya sea por correo, mensajería interna o enlaces personalizados.  
+   - Cada **Participante** recibe su formulario (o enlace) y procede a contestarlo en un entorno centralizado.
+
+6. **Respuestas de los Participantes**  
+   - Los **Participantes** responden las preguntas y el sistema va guardando esas respuestas en la Base de Datos.  
+   - El **Sistema ReuniCheck** puede notificar al Organizador sobre quién ya ha contestado y quién falta por responder.
+
+7. **Solicitud de análisis/conclusiones**  
+   - El _Organizador_ solicita al sistema que analice la información recopilada.  
+   - El **Sistema ReuniCheck** consulta todas las respuestas en la Base de Datos.
+
+8. **Aplicación de lógica/IA**  
+   - El sistema revisa los datos para detectar:  
+     1. Si falta información clave.  
+     2. Si existen desacuerdos entre los participantes.  
+     3. Si se ha alcanzado un consenso claro.  
+   - En base a este análisis, el sistema toma la decisión final sobre la necesidad de reunión.
+
+9. **Decisión: ¿Reunión necesaria?**  
+   - **Caso A (Reunión necesaria):**  
+     - El sistema indica que hace falta reunión y genera una invitación o un enlace de calendario con las posibles fechas.  
+     - Se adjunta un resumen de respuestas y puntos a tratar en la reunión.  
+   - **Caso B (No es necesaria la reunión):**  
+     - Se elabora un informe final con las conclusiones y soluciones propuestas.  
+     - Se comparte con los participantes y queda registrado que el tema se resolvió sin convocar una reunión.
+
+10. **Informe/Convocatoria**  
+   - Si hay reunión, el sistema crea el acto en el calendario y envía avisos a los involucrados.  
+   - Si no la hay, se distribuye un reporte de cierre.  
+   - Con ello, el proceso concluye.
+
+Este diagrama refleja cómo **ReuniCheck** optimiza el tiempo de los equipos mediante:
+- La generación automatizada de preguntas.
+- La recolección eficiente de respuestas.
+- Un análisis fundamentado que decide si el intercambio asíncrono es suficiente o si, efectivamente, hace falta convocar una reunión.
+```
+
