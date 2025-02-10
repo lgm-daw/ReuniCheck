@@ -1,1 +1,112 @@
-# ReuniCheck
+# **ReuniCheck**
+
+## Descripción general
+**ReuniCheck** es un sistema diseñado para determinar si una reunión es realmente necesaria y, en caso afirmativo, organizarla de la mejor manera posible. Si no se requiere una reunión, el sistema genera conclusiones o soluciones que evitan el gasto de tiempo de los participantes.
+
+El producto consta de tres módulos principales, cada uno con responsabilidades específicas:
+
+---
+
+## Módulo 1: Generación de preguntas a partir del “tema principal”
+
+1. **Entrada**  
+   - El usuario (organizador) indica el tema principal de la reunión (ej. “Revisión de hitos del proyecto X”, “Discusión de estrategia de marketing”, etc.).
+
+2. **Procesamiento / generación de preguntas**  
+   - Con base en ese tema, el sistema (usando IA o reglas predefinidas) genera automáticamente un conjunto de preguntas relevantes.  
+   - El objetivo es recopilar la información necesaria para:  
+     - Tener claridad sobre el estado actual de la situación.  
+     - Identificar posibles soluciones sin necesidad de una reunión presencial.  
+     - Determinar si el tema está suficientemente abordado de manera asíncrona.
+
+3. **Configuración opcional**  
+   - Posibilidad de añadir o modificar manualmente las preguntas generadas por la IA, para ajustarlas a la realidad de la empresa o del equipo.  
+   - Definir los participantes a quienes se les enviará cada pregunta (pueden existir preguntas específicas para ciertos roles).
+
+**Salida/Resultado**  
+- Lista final de preguntas enfocadas en el tema principal.  
+- Mapeo de preguntas-participantes.
+
+---
+
+## Módulo 2: Distribución de preguntas y recopilación de respuestas
+
+1. **Envío de cuestionario**  
+   - El sistema envía las preguntas (vía formulario, email o plataforma de mensajería interna) a cada usuario/participante.  
+   - Cada participante accede y responde en un entorno centralizado o recibe un enlace individual.
+
+2. **Gestión de respuestas**  
+   - El sistema almacena las respuestas en una base de datos, relacionándolas con cada participante y cada pregunta.  
+   - Se registran los participantes que ya han respondido y los que no, con la posibilidad de enviar recordatorios automáticos.
+
+3. **Interfaz de visualización (para el organizador)**  
+   - Visualización del progreso de respuesta (quién contestó, quién falta).  
+   - Acceso a las respuestas parciales, para ir evaluando de manera preliminar.
+
+**Salida/Resultado**  
+- Un conjunto completo de respuestas ordenadas por pregunta y participante.
+
+---
+
+## Módulo 3: Análisis y conclusiones (¿se necesita la reunión?)
+
+1. **Procesamiento de respuestas**  
+   - El sistema analiza toda la información recopilada. Esto puede hacerse con:  
+     - Reglas lógicas (ej. si hay desacuerdos, si faltan datos clave, etc.).  
+     - IA o procesamiento de lenguaje natural para identificar conflicto, consenso o vacíos de información.
+
+2. **Toma de decisión**  
+   - En base al análisis, el sistema determina:  
+     - **Si la reunión es necesaria**: Existe información inconclusa, desacuerdos, bloqueos o puntos que requieren discusión colectiva.  
+     - **Si la reunión NO es necesaria**: Se ha logrado consenso, el problema está resuelto o se pueden proponer soluciones concretas sin más debate.
+
+3. **Acciones derivadas**  
+   - **Caso A: reunión necesaria**  
+     - El sistema alerta a los participantes (ej. vía correo o integración con el calendario) y propone una fecha y hora (opcional).  
+     - Proporciona un resumen de las respuestas para preparar la reunión.  
+   - **Caso B: reunión no necesaria**  
+     - El sistema envía un informe final con las conclusiones y/o soluciones relevantes ya identificadas.  
+     - Deja constancia en un histórico (acta virtual) de que el tema se resolvió sin convocar reunión.
+
+4. **Entrega de conclusiones**  
+   - Se genera un documento o reporte con el resultado del análisis, incluyendo:  
+     - Puntos clave, soluciones propuestas.  
+     - Razón por la que se concluye si la reunión es o no necesaria.
+
+**Salida/Resultado**  
+- Conclusión sobre la necesidad de reunión.  
+- Convocatoria y agenda (si procede).  
+- Solución o acto de cierre (si no se requiere reunión).
+
+---
+
+## Alcance completo
+El alcance de **ReuniCheck** cubre todo el flujo, desde la generación de preguntas basadas en el tema (Módulo 1), hasta la distribución y recolección de respuestas (Módulo 2), para finalizar con el análisis automatizado y la decisión (Módulo 3) sobre la necesidad real de llevar a cabo la reunión.
+
+De esta manera, el producto:
+- Optimiza el tiempo de los equipos.
+- Automatiza la creación de cuestionarios y la recolección de información.
+- Provee una conclusión fundamentada que orienta la siguiente acción (reunión o solución inmediata).
+
+Este ciclo permite a las empresas y equipos reducir reuniones innecesarias, mantener a todos informados y tomar decisiones más ágilmente.
+
+---
+
+## ¿Cómo empezar con ReuniCheck?
+
+1. **Definir el tema**: Ingresa el tema principal que deseas abordar.  
+2. **Generar preguntas**: Permite que el sistema cree una lista de preguntas relevantes (puedes editarlas).  
+3. **Elegir participantes**: Selecciona quién debe responder cada pregunta.  
+4. **Enviar cuestionarios**: Distribuye el formulario o los enlaces de respuesta.  
+5. **Recopilar y analizar**: Observa en tiempo real el progreso de las respuestas y deja que el sistema aplique la lógica o IA para decidir.  
+6. **Conoce el resultado**: Recibe una notificación indicando si se requiere reunión o no, junto con conclusiones y próximos pasos.
+
+---
+
+## Requisitos y Tecnologías (ejemplo)
+- Lenguaje de programación backend: Python / Node.js / Java, etc.  
+- Base de datos: MySQL / PostgreSQL / MongoDB, etc.  
+- Servicios de mensajería o correo para notificaciones: SendGrid, SMTP, etc.  
+- Opcional: Integración con APIs de calendario (Google Calendar, Outlook, etc.) para programar reuniones de forma automática.
+
+
