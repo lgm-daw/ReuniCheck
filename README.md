@@ -122,7 +122,7 @@ Este esquema ofrece una **visión global** del proyecto, mostrando el recorrido 
 
 ![Flujo de ReuniCheck con Base de Datos y Usuarios](img/flujo.png)
 
-```markdown
+
 # Explicación paso a paso del diagrama
 
 Este diagrama representa cómo **ReuniCheck** (el sistema) coordina las interacciones entre el **Organizador**, los **Participantes** y la **Base de Datos** para decidir si es necesaria una reunión o se pueden extraer conclusiones sin convocarla.
@@ -179,5 +179,4 @@ Este diagrama refleja cómo **ReuniCheck** optimiza el tiempo de los equipos med
 - La generación automatizada de preguntas.
 - La recolección eficiente de respuestas.
 - Un análisis fundamentado que decide si el intercambio asíncrono es suficiente o si, efectivamente, hace falta convocar una reunión.
-```
 
