@@ -29,23 +29,21 @@ El producto consta de tres módulos principales, cada uno con responsabilidades 
 
 ---
 
-## Módulo 2: Distribución de preguntas y recopilación de respuestas
+## Módulo 2: Interacción Inteligente con el Usuario
 
-1. **Envío de cuestionario**  
-   - El sistema envía las preguntas (vía formulario, email o plataforma de mensajería interna) a cada usuario/participante.  
-   - Cada participante accede y responde en un entorno centralizado o recibe un enlace individual.
-
-2. **Gestión de respuestas**  
-   - El sistema almacena las respuestas en una base de datos, relacionándolas con cada participante y cada pregunta.  
-   - Se registran los participantes que ya han respondido y los que no, con la posibilidad de enviar recordatorios automáticos.
-
-3. **Interfaz de visualización (para el organizador)**  
-   - Visualización del progreso de respuesta (quién contestó, quién falta).  
-   - Acceso a las respuestas parciales, para ir evaluando de manera preliminar.
-
-**Salida/Resultado**  
-- Un conjunto completo de respuestas ordenadas por pregunta y participante.
-
+1. Entrada
+    • Notificaciones y alertas automáticas generadas por la IA cuando se detectan bloqueos o decisiones pendientes. 
+    • Opciones de acción directa dentro de la aplicación para resolver problemas sin necesidad de coordinar una reunión.
+   
+3. Procesamiento
+    • Diálogo interactivo con la IA a través de la interfaz de la aplicación para recibir sugerencias y tomar decisiones. 
+    • Posibilidad de aceptar, modificar o rechazar soluciones propuestas. 
+    • Registro automático de decisiones y acciones tomadas. 
+    • Eliminación de la necesidad de correos electrónicos y mensajería instantánea externa, centralizando toda la comunicación en la plataforma.
+   
+5. Salida / Resultado
+    • Implementación inmediata de soluciones aprobadas sin interrupciones. 
+    • Reducción drástica de la necesidad de reuniones y de la dependencia de sistemas de mensajería externos. 
 ---
 
 ## Módulo 3: Análisis y conclusiones (¿se necesita la reunión?)
